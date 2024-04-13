@@ -1,0 +1,125 @@
+* {
+    /* 端の余白をなくす */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+}
+img {
+    /* 画像の最大サイズを設定 */
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    text-decoration: none;
+}
+
+body {
+    /* 背景をグレーに */
+    background-color: #C4C4C4;
+}
+
+header {
+    /* ヘッダーを用意 */
+    height: 50px;
+    background-color: #ffffff;
+}
+
+main {
+    /* メインを用意 */
+ padding-bottom: 300px;
+}
+
+footer {
+    /* フッターを用意 */
+    height: 50px;
+    background-color: #ffffff;
+}
+
+.cards {
+    /* flexboxを適用 */
+    display: flex;
+    /* 横方向 中央に */
+    justify-content: center;
+    /* 縦方向 中央に */
+    align-items: center;
+    /* 折り返しを有効にする */
+    flex-wrap: wrap;
+}
+
+.card {
+    /* 横幅をコンテンツに合わせる */
+    width: fit-content;
+    background-color: #fff;
+    /* 中の余白を設定 */
+    padding: 10px;
+    /* 外の余白を設定 */
+    margin: 80px;
+    aspect-ratio: 1 / 1;
+}
+
+.card__title {
+    color: #282828;
+    font-size: 14px;
+}
+
+.card__description {
+    color: #282828;
+    font-size: 12px;
+}
+
+.card img {
+    width: 288px;
+    height: 182px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px){
+/* 768px以下に適用されるCSS */
+.card {
+    /* 中の余白を設定 */
+    padding: 10px 10px 0px 10px;
+    /* 外の余白を設定 */
+    margin: 50px;
+}
+.card img {
+    width: 198px;
+    height: 102px;
+}
+.card__title {
+    font-size: 12px;
+}
+.card__description {
+    font-size: 10px;
+}
+}
+
+@media screen and (max-width: 320px) {
+/* 320px以下に適用されるCSS */
+.cards {
+    flex-direction: column;
+}
+.card {
+    /* 中の余白を設定 */
+    padding: 10px 10px 0px 10px;
+    /* 外の余白を設定 */
+    margin: 40px 10px;
+}
+.card img {
+    width: 158px;
+    height: 82px;
+}
+.card__title {
+    font-size: 10px;
+}
+.card__description {
+   display: none;
+}
+}
+
